@@ -1,0 +1,149 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    
+}
+
+header{
+    width: 100%;
+    display: flex;
+    padding: 2vw;
+    justify-content: flex-start;
+}
+
+header img{
+    width: 5vw;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 160vw;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90vw;
+}
+
+.item-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.item-header img{
+    width: 10vw;
+}
+
+.item-header div p{
+    font-size: 5vw;
+    font-family: 'Inter', sans-serif;
+}
+
+.item-picture{
+    display: flex;
+    justify-content: center;
+}
+
+.item-picture img{
+    width: 60vw;
+}
+
+.item-count{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.item-count img{
+    width: 10vw;
+}
+
+.item-count p{
+    font-size: 8vw;
+    font-family: 'Inter', sans-serif;
+}
+
+.suplmnts{
+    width: 100%;
+}
+
+.ingredients{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 60vw;
+    align-items: center;
+}
+
+.suplmnts{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ingredient{
+    height: 40vw;
+    padding: 2vw 0vw;
+    border-radius: 15px;
+    border: 1px solid rgb(194, 194, 194);
+    box-shadow: 0 0 5px rgb(163, 162, 162);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+}
+
+.ingredient img{
+    width: 8vw;
+}
+
+.ingredient i{
+    font-size: 8vw;   
+}
+
+.width-of-item{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.width-of-item div{
+    width: 42vw;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 10px;
+    text-align: center;
+    padding: 2vw 12vw; 
+    font-size: 5vw;
+    font-family: 'Inter', sans-serif;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEC302;
+}
+
+footer button{
+    font-size: 7vw;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
