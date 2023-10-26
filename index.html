@@ -3,77 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PizzaHut</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <header>
         <img src="img/back.svg" alt="">
     </header>
-    <main>
-        <section class="item">
-            <section class="item-header">
-                <img src="img/rang.svg" alt="" style="width: 15vw;">
-                <div class="name">
-                    <p>Pizza "Tomato"</p>
-                </div>
-                <img src="img/heart.svg" alt="" style="width: 7vw;">
-            </section>
-            <section class="item-picture">
-                <img src="img/pizza.svg" alt="">
-            </section>
-            <section class="item-count">
-                <img src="img/minus.svg" alt="" value="pizza-minus-btn">
-                <div class="count">
-                    <p>0</p>
-                </div>
-                <img src="img/plus.svg" alt="" value="pizza-plus-btn">
-            </section>
-        </section>
-        <section class="ingredients">
-            <section class="suplmnts">
-                <div class="ingredient">
-                    <img src="img/plus.svg" alt="" value="count-plus-btn">
-                     <i class="fa-solid fa-cheese" style="color: #00020a;"></i>
-                    <div class="ingredient-count"><p>0</p></div>
-                    <img src="img/minus.svg" alt="" value="count-minus-btn">
-                </div>
-                <div class="ingredient">
-                    <img src="img/plus.svg" alt="" value="count-plus-btn">
-                    <i class="fa-solid fa-bacon" style="color: #000000;"></i>     
-                    <div class="ingredient-count"><p>0</p></div>      
-                    <img src="img/minus.svg" alt=""  value="count-minus-btn">
-                </div>
-                <div class="ingredient">
-                    <img src="img/plus.svg" alt="" value="count-plus-btn">
-                    <i class="fa-solid fa-pepper-hot" style="color: #000000;"></i>     
-                    <div class="ingredient-count"><p>0</p></div>       
-                    <img src="img/minus.svg" alt="" value="count-minus-btn">
-                </div>
-                <div class="ingredient">
-                    <img src="img/plus.svg" alt="" value="count-plus-btn">
-                    <i class="fa-solid fa-carrot" style="color: #000000;"></i>     
-                    <div class="ingredient-count"><p>0</p></div> 
-                    <img src="img/minus.svg" alt="" value="count-minus-btn">
-                </div>
-            </section>
-            <section class="width-of-item">
-                <div class="choosen-width-type">Classic</div>
-                <div class="">Thin</div>
-            </section>
-        </section>        
-    </main>
 
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <main>
+                    <section class="item">
+                        <section class="item-header">
+                            <img src="img/rang.svg" alt="" style="width: 15vw;">
+                            <div class="name">
+                                <p>Pizza "Tomato"</p>
+                            </div>
+                            <img src="img/heart.svg" alt="" style="width: 7vw;">
+                        </section>
+                        <section class="item-picture">
+                            <img src="img/pizza.svg" alt="">
+                        </section>
+                        <section class="item-count">
+                            <img src="img/minus.svg" alt="" value="pizza-minus-btn">
+                            <div class="count">
+                                <p>0</p>
+                            </div>
+                            <img src="img/plus.svg" alt="" value="pizza-plus-btn">
+                        </section>
+                    </section>
+                    <section class="ingredients">
+                        <section class="suplmnts">
+                            <div class="ingredient">
+                                <img src="img/plus.svg" alt="" value="count-plus-btn">
+                                <i class="fa-solid fa-cheese" style="color: #00020a;"></i>
+                                <div class="ingredient-count"><p>0</p></div>
+                                <img src="img/minus.svg" alt="" value="count-minus-btn">
+                            </div>
+                            <div class="ingredient">
+                                <img src="img/plus.svg" alt="" value="count-plus-btn">
+                                <i class="fa-solid fa-bacon" style="color: #000000;"></i>     
+                                <div class="ingredient-count"><p>0</p></div>      
+                                <img src="img/minus.svg" alt=""  value="count-minus-btn">
+                            </div>
+                            <div class="ingredient">
+                                <img src="img/plus.svg" alt="" value="count-plus-btn">
+                                <i class="fa-solid fa-pepper-hot" style="color: #000000;"></i>     
+                                <div class="ingredient-count"><p>0</p></div>       
+                                <img src="img/minus.svg" alt="" value="count-minus-btn">
+                            </div>
+                            <div class="ingredient">
+                                <img src="img/plus.svg" alt="" value="count-plus-btn">
+                                <i class="fa-solid fa-carrot" style="color: #000000;"></i>     
+                                <div class="ingredient-count"><p>0</p></div> 
+                                <img src="img/minus.svg" alt="" value="count-minus-btn">
+                            </div>
+                        </section>
+                        <section class="width-of-item">
+                            <div class="choosen-width-type">Classic</div>
+                            <div class="">Thin</div>
+                        </section>
+                    </section>    
+                    <section class="cost">
+                        <p>0 rub</p>
+                    </section>    
+                </main>
+            </div>
+            <div class="swiper-slide">
+                <main>
+                    <section class="item">
+                        <section class="item-header">
+                            <img src="img/rang.svg" alt="" style="width: 15vw;">
+                            <div class="name">
+                                <p>Pizza "Tomato"</p>
+                            </div>
+                            <img src="img/heart.svg" alt="" style="width: 7vw;">
+                        </section>
+                        <section class="item-picture">
+                            <img src="img/pizza.svg" alt="">
+                        </section>
+                        <section class="item-count">
+                            <img src="img/minus.svg" alt="" value="pizza-minus-btn">
+                            <div class="count">
+                                <p>0</p>
+                            </div>
+                            <img src="img/plus.svg" alt="" value="pizza-plus-btn">
+                        </section>
+                    </section>
+                    <section class="ingredients">
+                        <section class="suplmnts">
+                            <div class="ingredient">
+                                <img src="img/plus.svg" alt="" value="count-plus-btn">
+                                <i class="fa-solid fa-cheese" style="color: #00020a;"></i>
+                                <div class="ingredient-count"><p>0</p></div>
+                                <img src="img/minus.svg" alt="" value="count-minus-btn">
+                            </div>
+                            <div class="ingredient">
+                                <img src="img/plus.svg" alt="" value="count-plus-btn">
+                                <i class="fa-solid fa-bacon" style="color: #000000;"></i>     
+                                <div class="ingredient-count"><p>0</p></div>      
+                                <img src="img/minus.svg" alt=""  value="count-minus-btn">
+                            </div>
+                            <div class="ingredient">
+                                <img src="img/plus.svg" alt="" value="count-plus-btn">
+                                <i class="fa-solid fa-pepper-hot" style="color: #000000;"></i>     
+                                <div class="ingredient-count"><p>0</p></div>       
+                                <img src="img/minus.svg" alt="" value="count-minus-btn">
+                            </div>
+                            <div class="ingredient">
+                                <img src="img/plus.svg" alt="" value="count-plus-btn">
+                                <i class="fa-solid fa-carrot" style="color: #000000;"></i>     
+                                <div class="ingredient-count"><p>0</p></div> 
+                                <img src="img/minus.svg" alt="" value="count-minus-btn">
+                            </div>
+                        </section>
+                        <section class="width-of-item">
+                            <div class="choosen-width-type">Classic</div>
+                            <div class="">Thin</div>
+                        </section>
+                    </section>    
+                    <section class="cost">
+                        <p>0 rub</p>
+                    </section>    
+                </main>
+            </div>
+            <div class="swiper-slide">
+                <main>
+                    <section class="item">
+                        <section class="item-header">
+                            <img src="img/rang.svg" alt="" style="width: 15vw;">
+                            <div class="name">
+                                <p>Pizza "Tomato"</p>
+                            </div>
+                            <img src="img/heart.svg" alt="" style="width: 7vw;">
+                        </section>
+                        <section class="item-picture">
+                            <img src="img/pizza.svg" alt="">
+                        </section>
+                        <section class="item-count">
+                            <img src="img/minus.svg" alt="" value="pizza-minus-btn">
+                            <div class="count">
+                                <p>0</p>
+                            </div>
+                            <img src="img/plus.svg" alt="" value="pizza-plus-btn">
+                        </section>
+                    </section>
+                    <section class="ingredients">
+                        <section class="suplmnts">
+                            <div class="ingredient">
+                                <img src="img/plus.svg" alt="" value="count-plus-btn">
+                                <i class="fa-solid fa-cheese" style="color: #00020a;"></i>
+                                <div class="ingredient-count"><p>0</p></div>
+                                <img src="img/minus.svg" alt="" value="count-minus-btn">
+                            </div>
+                            <div class="ingredient">
+                                <img src="img/plus.svg" alt="" value="count-plus-btn">
+                                <i class="fa-solid fa-bacon" style="color: #000000;"></i>     
+                                <div class="ingredient-count"><p>0</p></div>      
+                                <img src="img/minus.svg" alt=""  value="count-minus-btn">
+                            </div>
+                            <div class="ingredient">
+                                <img src="img/plus.svg" alt="" value="count-plus-btn">
+                                <i class="fa-solid fa-pepper-hot" style="color: #000000;"></i>     
+                                <div class="ingredient-count"><p>0</p></div>       
+                                <img src="img/minus.svg" alt="" value="count-minus-btn">
+                            </div>
+                            <div class="ingredient">
+                                <img src="img/plus.svg" alt="" value="count-plus-btn">
+                                <i class="fa-solid fa-carrot" style="color: #000000;"></i>     
+                                <div class="ingredient-count"><p>0</p></div> 
+                                <img src="img/minus.svg" alt="" value="count-minus-btn">
+                            </div>
+                        </section>
+                        <section class="width-of-item">
+                            <div class="choosen-width-type">Classic</div>
+                            <div class="">Thin</div>
+                        </section>
+                    </section>    
+                    <section class="cost">
+                        <p>0 rub</p>
+                    </section>    
+                </main>
+            </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
+    
+    
     <footer>
         <button type="button">Add to cart</button>
     </footer>
-    <script src="https://kit.fontawesome.com/76755f97e2.js" crossorigin="anonymous"></script>
 
+    <script src="https://kit.fontawesome.com/76755f97e2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="slider/slider.js"></script>
 </body>
 
 </html>

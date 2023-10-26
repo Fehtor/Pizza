@@ -22,7 +22,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 160vw;
+    height: 175vw;
 }
 
 .item{
@@ -153,6 +153,19 @@ main{
     background-color: #FEC302;
 }
 
+.cost{
+    width: 100%;
+    height: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cost p{
+    font-family: 'Inter', sans-serif;
+    font-size: 7vw;
+}
+
 footer{
     position: absolute;
     bottom: 0;
@@ -169,5 +182,16 @@ footer button{
     font-size: 7vw;
     color: white;
     font-family: 'Inter', sans-serif;
+}
+
+.swiper{
+    width: 100vw;
+    height: 95vh;
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

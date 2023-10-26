@@ -5,7 +5,7 @@ let widthTypeBtns = document.querySelectorAll('.width-of-item div')
 function addIngredient(event){
     let ingredient = event.currentTarget.parentNode
     let count = ingredient.querySelector(".ingredient-count p")
-    if(event.currentTarget.getAttribute("value") == "count-plus-btn"){
+    if(event.currentTarget.getAttribute("value") == "count-plus-btn" && Number(count.innerHTML) < 99){
         ingredient.classList.add("ingredient-clicked")
         ingredient.querySelector(".ingredient-count").style.display = "flex"
         ingredient.querySelector("i").style.display = "none"
