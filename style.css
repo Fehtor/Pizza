@@ -105,12 +105,32 @@ main{
     width: 20%;
 }
 
+.ingredient-clicked{
+    background-color: #FEC302;
+}
+
 .ingredient img{
     width: 8vw;
 }
 
 .ingredient i{
     font-size: 8vw;   
+}
+
+.ingredient-count{
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    background-color: white;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+}
+
+.ingredient-count p{
+    font-family: 'Inter', sans-serif;
+    font-size: 6vw;
+    font-weight: 700;
 }
 
 .width-of-item{
@@ -127,6 +147,10 @@ main{
     padding: 2vw 12vw; 
     font-size: 5vw;
     font-family: 'Inter', sans-serif;
+}
+
+.choosen-width-type{
+    background-color: #FEC302;
 }
 
 footer{
