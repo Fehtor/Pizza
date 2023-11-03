@@ -22,6 +22,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     height: 175vw;
 }
 
@@ -154,10 +155,10 @@ main{
 }
 
 .cost{
-    width: 100%;
+    width: 18%;
     height: 15vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -187,11 +188,26 @@ footer button{
 .swiper{
     width: 100vw;
     height: 95vh;
+    position: relative;
 }
 
 .swiper-slide{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.swiper div[class^="swiper-button"]{
+    position: absolute;
+}
+
+.swiper-button-prev{
+    top: 43vw !important;
+    left: 7vw !important;
+}
+
+.swiper-button-next{
+    top: 43vw !important;
+    right: 7vw !important;
 }
 
