@@ -6,23 +6,22 @@ let pepperony = {
     name: "Pizza Pepperony",
     cost: 500,
     ingreds: {
-        cheese: {
-            cheeseAmount: 0,
-            cheeseCost: 5,
-
+        cheese : {
+            amount: 0,
+            cost: 5,
         },
-        bacon:{
-            baconAmount: 0,
-            baconCost: 10,
+        bacon :{
+            amount: 0,
+            cost: 10,
         },
-        pepper: {
-            pepperAmount: 0,
-            pepperCost: 7,
+        pepper : {
+            amount: 0,
+            cost: 7,
         },
-        carrot:{
-            carrotAmount: 0,
-            carrrotCost: 5,
-        },
+        carrot : {
+            amount: 0,
+            cost: 5,
+        }
     },
     amount: 0
 }
@@ -31,23 +30,22 @@ let tomato = {
     name: "Pizza Tomato",
     cost: 400,
     ingreds: {
-        cheese: {
-            cheeseAmount: 0,
-            cheeseCost: 5,
-
+        cheese : {
+            amount: 0,
+            cost: 5,
         },
-        bacon:{
-            baconAmount: 0,
-            baconCost: 10,
+        bacon :{
+            amount: 0,
+            cost: 10,
         },
-        pepper: {
-            pepperAmount: 0,
-            pepperCost: 7,
+        pepper : {
+            amount: 0,
+            cost: 7,
         },
-        carrot:{
-            carrotAmount: 0,
-            carrrotCost: 5,
-        },
+        carrot : {
+            amount: 0,
+            cost: 5,
+        }
     },
     amount: 0
 }
@@ -55,29 +53,35 @@ let blueCheese = {
     name: "Pizza Blue-Cheese",
     cost: 800,
     ingreds: {
-        cheese: {
-            cheeseAmount: 0,
-            cheeseCost: 5,
-
+        cheese : {
+            amount: 0,
+            cost: 5,
         },
-        bacon:{
-            baconAmount: 0,
-            baconCost: 10,
+        bacon :{
+            amount: 0,
+            cost: 10,
         },
-        pepper: {
-            pepperAmount: 0,
-            pepperCost: 7,
+        pepper : {
+            amount: 0,
+            cost: 7,
         },
-        carrot:{
-            carrotAmount: 0,
-            carrrotCost: 5,
-        },
+        carrot : {
+            amount: 0,
+            cost: 5,
+        }
     },
+    
     amount: 0
 }
 
+let inrgedList = ["cheese", "bacon", "pepper", "carrot"]
 
+let pizzas = [tomato, pepperony, blueCheese]
 function addIngredient(event){
+    let pizzaId = event.currentTarget.parentNode.parentNode.parentNode.parentNode.querySelector(".item").getAttribute("pizzaID")
+    let ingredType = event.currentTarget.parentNode.getAttribute("ingredType")
+
+    
     let ingredient = event.currentTarget.parentNode
     let count = ingredient.querySelector(".ingredient-count p")
     if(event.currentTarget.getAttribute("value") == "count-plus-btn" && Number(count.innerHTML) < 99){
@@ -86,6 +90,7 @@ function addIngredient(event){
         ingredient.querySelector("i").style.display = "none"
         count.innerHTML =  Number(count.innerHTML) + 1
         count.innerHTML = "+" + count.innerHTML;
+        pizzas[pizzaId].ingreds[ingredType].amount += 1
     }
     else{
         if(count.innerHTML == "+1"){
@@ -93,12 +98,16 @@ function addIngredient(event){
             ingredient.querySelector(".ingredient-count").style.display = "none"
             ingredient.querySelector("i").style.display = "inline"
             count.innerHTML = Number(count.innerHTML) - 1
+            pizzas[pizzaId].ingreds[ingredType].amount -= 1
         }
         else if(Number(count.innerHTML) > 1){
             count.innerHTML = Number(count.innerHTML) - 1
             count.innerHTML = "+" + count.innerHTML;
+            pizzas[pizzaId].ingreds[ingredType].amount -= 1
         }
     }
+
+    uppdateCost()
 }
 
 function addPizza(event){
@@ -111,18 +120,15 @@ function addPizza(event){
         switch(pizzaType){
             case "Pizza Tomato":
                 tomato.amount += 1
-                
-                cost.innerHTML = Number(cost.innerHTML) + Number(tomato.cost)
-                console.log(Number(cost))
-                console.log(cost)
+                //cost.innerHTML = Number(cost.innerHTML) + Number(tomato.cost)
                 break
             case "Pizza Blue-Cheese":
                 blueCheese.amount += 1
-                cost.innerHTML = Number(cost.innerHTML) + Number(blueCheese.cost)
+                //cost.innerHTML = Number(cost.innerHTML) + Number(blueCheese.cost)
                 break
             case "Pizza Pepperony":
                 pepperony.amount += 1
-                cost.innerHTML = Number(cost.innerHTML) + Number(pepperony.cost)
+                //cost.innerHTML = Number(cost.innerHTML) + Number(pepperony.cost)
                 break
         }
     }
@@ -131,18 +137,31 @@ function addPizza(event){
         switch(pizzaType){
             case "Pizza Tomato":
                 tomato.amount -= 1
-                cost.innerHTML = Number(cost.innerHTML) - tomato.cost
+               // cost.innerHTML = Number(cost.innerHTML) - tomato.cost
                 break
             case "Pizza Blue-Cheese":
                 blueCheese.amount -= 1
-                cost.innerHTML = Number(cost.innerHTML) - blueCheese.cost
+                //cost.innerHTML = Number(cost.innerHTML) - blueCheese.cost
                 break
             case "Pizza Pepperony":
                 pepperony.amount -= 1
-                cost.innerHTML = Number(cost.innerHTML) - pepperony.cost
+                //cost.innerHTML = Number(cost.innerHTML) - pepperony.cost
                 break
         }
     }
+    uppdateCost()
+}
+
+function uppdateCost(){
+    let cost = document.querySelector(".cost #cost-num")
+    let num = 0;
+    for(let i = 0; i < pizzas.length; i++){
+        num += pizzas[i].amount * pizzas[i].cost
+        for(let j = 0; j < inrgedList.length; j++){
+            num += pizzas[i].ingreds[inrgedList[j]].amount * pizzas[i].ingreds[inrgedList[j]].cost * pizzas[i].amount
+        }
+    }
+    cost.innerHTML = num
 }
 
 function changeWidthType(){  

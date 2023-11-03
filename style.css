@@ -23,7 +23,7 @@ main{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 175vw;
+    height: 155vw;
 }
 
 .item{
@@ -160,6 +160,9 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    bottom: 25vw;
+    left: 40vw;
 }
 
 .cost p{
